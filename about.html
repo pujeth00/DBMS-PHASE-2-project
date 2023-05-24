@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='mainicon.jpg') }}">
+    <script src="https://kit.fontawesome.com/0cfdb2b343.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css”/>
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css” />
+    <title>Akshaya/about</title>
+    <style>
+    body
+        {margin:0;
+            font-family: 'Poppins', sans-serif;}
+header{
+  position: fixed;
+  top:0;
+  height: 145px;
+  width: 100%;
+  background: white;
+  font-family: 'Poppins', sans-serif;
+  border-top:30px solid green;
+  padding: 10px 10%;
+  box-sizing: border-box;
+}
+header a
+{
+float: right;
+color: black;
+text-align: center;
+ padding: 14px 16px;
+margin:10px;
+font-size:1.3rem;
+text-align:center;
+}
+header a:hover {
+background-color: #121111;
+color: rgb(252, 249, 249);
+border-radius: 10px;
+}
+header a.do
+{
+color:aliceblue;
+background-color: green;
+border-radius: 11px;
+}
+
+header a.do:hover
+{
+color:rgb(8, 8, 8);
+background-color: rgb(0, 255, 0);
+}
+@supports (height: 97vh) { 
+  body{ 
+    background: linear-gradient(to right top, green 50%, #DDD 50%);
+    background-size: 100% calc(100% - 97vh + 129px);
+    background-repeat: no-repeat;
+  }
+
+  body:before{
+    content:'';
+    position: fixed;
+    top: 148px;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    background: white;
+  }
+}
+.a1
+{
+    float: right;
+   color: black;
+   padding: 14px 16px;
+   margin:10px;
+   font-size:2.4rem;
+   position: relative;
+   top:20%;
+   right:40%;
+   z-index:-1;
+}
+.d1
+{
+    color:white;
+    background-color: green;
+    padding:8px;
+    border:2px solid green;
+    border-radius:11px;
+}
+.a2
+{
+    text-align: center;
+    margin:20px;
+}
+.a3
+{
+    margin-left:10%;
+    margin-right:10%;
+}
+.container
+{
+    display: grid;
+  grid-template-columns: auto auto auto auto;
+
+  padding: 20px;
+  margin-left:15%;
+  margin-right:15%;
+  justify-content: center;
+}
+
+.card
+{
+     border-style: outset;
+     margin:20px;
+     height:300px;
+     width:70%;
+     padding:10px;
+}
+
+.card-title
+{
+    text-align: center;
+    color:rgb(3, 86, 3);
+    font-size:2rem;
+}
+.card-text-p-y-1
+{
+    text-align: center;
+    overflow:hidden;
+}
+.r7
+{
+    background-color: green;
+    color:aliceblue;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    align-items:center;
+    font-size:2rem;
+    text-align: center;
+}
+#e2
+{
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom:20px;
+}
+.r71
+{
+    float:right;
+}
+.r72
+{
+    background-color:white;
+    color:black;
+    border:3px solid black;
+    padding:5px;
+    font-family:'Poppins', sans-serif; 
+    border-radius:5px;
+    width:80px;
+    font-size:1rem;
+
+}
+
+.r72:hover
+{
+    background-color:rgb(8, 250, 8);
+    color:black;
+}
+
+.r73
+{
+    font-family:'Poppins', sans-serif; 
+    border:3px solid black;
+    border-radius:10px;
+
+}
+#container {
+  width: 150px;
+  height: 150px;
+  background: url(/static/mainload.png) no-repeat center; 
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@keyframes animation {
+  0% {
+    stroke-dasharray: 1 98;
+    stroke-dashoffset: -105;
+  }
+  50% {
+    stroke-dasharray: 80 10;
+    stroke-dashoffset: -160;
+  }
+  100% {
+    stroke-dasharray: 1 98;
+    stroke-dashoffset: -300;
+  }
+}
+
+#spinner {
+  transform-origin: center;
+  animation-name: animation;
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier;
+  animation-iteration-count: infinite;
+  
+}
+.white
+{
+  background: white;
+}
+
+/* ------------------add extra css from here--------------------------- */
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='mainicon.jpg') }}" height="100px">
+        <a href="/donate" class="do"><b>Donate Now</b></a>
+        <a href="/joinwithus"><b>Join us</b></a>
+        <a href="/contact"><b>Contact</b></a>
+        <a href="/about"><b>About</b></a>
+        <a href="/" class="index"><b>Home</b></a>
+      </header>
+      <br><br>
+      <br><br>
+      <br><br>
+      <!----------------------- add extra html from here------------------ -->
+    <div class="a1">
+        <a><b>About</b></a>
+        <a class="d1"><b>us</b></a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="a2">
+        <h2>"Hunger is not a problem. It is an obscenity. How wonderful it is that nobody need wait a single moment before starting to improve the world" <br><h1>Anne Frank</h1></h2>
+    </div>
+    <br>
+    <div class="a3">
+        <h3>Akshaya is an organisation which aims to redistribute excess food from weddings, parties, events to those who are hungry.<br>
+
+            The idea took root in Coimbatore, where we started with 2 Shopper Bags and a volunteer to collect the surplus food and deliver to the homeless through Public Transportation System from October 16th, 2014. We took an oath on that day to stop food waste and satisfy the hunger of many, in a quest to make the “World Hunger Free.”<br>
+            
+           AKshaya works alongside Governments, Corporates with Social Responsibility on their minds, other partners and Volunteers to create a local chapter of excess food collection institution, which will be spread across various cities, addressing the two major challenges namely urban and environmental, following the United Nations Sustainable Development Goals.<br>
+            
+            We aim to bring benefits across the spectrum of society and help provide access to food to those who don't have adequate means to access it.<br>
+            
+            A global level study by the Food and Agriculture Organization of the United Nations (FAO) says that one-third of the food, roughly 1.3 billion tons, is wasted every year. On the other hand, United Nations Food and Agriculture Organization (FAO) estimates that about 815 million people in the world are suffering from chronic undernourishment.<br>
+            
+            In addition to its important economic and societal impact, food waste places undue pressure on finite natural resources and the environment. The economic costs of this food wastage are substantial and amount to about $1 trillion each year. Food that is harvested but ultimately lost or wasted consumes about one-quarter of all water used by agriculture each year and requires a cropland area the size of China. Also, Food waste generates about 8% of global greenhouse gas emissions annually and it is the third-largest emitter of greenhouse gases in the world.<br>
+            
+            In the case of India, the Nation is the second-largest food producer in the World after China contributing to about 10.04% of the total World's food production. But, an average Indian household wastes 50 kg of food per person per year or 68,760,163 tonnes a year, according to the United Nations Environment Programme's Food Waste Index Report 2021 which has been valued at around INR 92,000 crores. The report explains that around 931 million tonnes of food waste were generated in 2019, 61% of which came from households, 26% from food service and 13% from retail.<br>
+            
+            On the other hand, over a sixth of India's population is permanently hungry and undernourished. That is almost 190 million people who go to sleep hungry, on most days. Over a third of the children under the age of five show the prevalence of stunting.<br>
+            
+            In the Global Hunger Index report 2020, India ranked 94th out of 107 countries with a score of 27.2 indicating a “Serious” hunger situation prevailing in the Nation.<br>
+            
+            India's low ranking also influences South Asia"s regional score as three-quarters of South Asia’s population reside in India. This can be tackled only through the combined action of all stakeholders of the Nation with a holistic approach towards reducing food waste and hunger.<br>
+            
+            Hunger cannot be combated without a strategy. India has a twin problem of excess supply of foodgrain (flagged by the RBI) and an excess number of very hungry people, which indicates that food is piling up at one end and on the other nearly 200 million people are hungry.</h3>
+    </div>
+    <div>
+        <div class="a1">
+            <a><b>Our</b></a>
+            <a class="d1"><b>Mission</b></a>
+        </div>
+        <div>
+            <img src="{{ url_for('static', filename='img9.jpg') }}" width="100%" border-bottom="4px solid black">
+        </div>
+        <br>
+        <br>
+        <div class="py-5">
+            <div class="container">
+              <div class="row hidden-md-up">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-block">
+                      <h4 class="card-title">1.Action</h4>
+                      <p class="card-text-p-y-1"><b>To feed the needy and hungry with untouchable edible surplus food.</b></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-block">
+                      <h4 class="card-title">2.Audit Methods</h4>
+                      <p class="card-text-p-y-1"><b>To sensitize people about the amount of food being wasted through standardized food waste auditing methods.</b></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-block">
+                      <h4 class="card-title">3.Alternative Solution</h4>
+                      <p class="card-text-p-y-1"><b>To feed the needy and hungry with untouchable edible surplus food.</b></p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-block">
+                      <h4 class="card-title">4.Citizen</h4>
+                      <p class="card-text-p-y-1"><b>To raise awareness about food loss and food waste amongst citizens and bring about behavioral change in them to prevent food waste at home, school or at workplace through guidance and sharing of good practices</b></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-block">
+                      <h4 class="card-title">5.Food Solution</h4>
+                      <p class="card-text-p-y-1"><b>To raise awareness among Food businesses by encouraging them to adopt good practices to reduce food loss and food waste in their supply chains and sharing good practices</b></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="r7">
+        <br>
+        <br>
+        <div class="r71">
+          <form action="mailto:cs21b2032@iiitdm.ac.in">
+            <textarea name="myTextBox" cols="50" rows="5" class="r73" placeholder="enter here">
+              Suggestions...
+            </textarea>
+            <br />
+            <input type="submit" class="r72">
+            </form>
+            
+        </div>
+        <div>
+          <img src="{{ url_for('static', filename='mainicon.jpg') }}" height="100px">
+          <h6><big>Akshaya</big> is a Not-For-Profit surplus food management organisation connecting untouched edible surplus food with needy people for making the World Hunger Free and Zero Food Waste.</h6>
+        </div>
+        <div>
+          <a><i class="bi-instagram" id="e2"></i></a>
+          <a><i class="bi-twitter" id="e2"></i></a>
+          <a><i class="bi-facebook" id="e2"></i></a>
+          <a><i class="bi-envelope"id="e2"></i></a>
+          <a><i class="bi-whatsapp"id="e2"></i></a>
+          <a><i class="bi-linkedin"id="e2"></i></a>
+          <br>
+          <br>
+        </div>
+      </div>
+      <script>
+        document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+              document.querySelector(
+                "body").style.visibility = "hidden";
+                document.querySelector(
+                "body").classList.add("white");
+                document.querySelector(
+                "#container").style.visibility = "visible";
+            } else {
+              document.querySelector("body").classList.remove("white");
+                document.querySelector(
+                "#container").style.display = "none";
+                document.querySelector(
+                "body").style.visibility = "visible";
+            }
+        };
+    </script>
+</body>
+<div id="container">
+  <svg viewBox="0 0 100 100">
+    <defs>
+      <filter id="shadow">
+        <feDropShadow dx="0" dy="0" stdDeviation="1.5" 
+          flood-color="green"/>
+      </filter>
+    </defs>
+    <circle id="spinner" style="fill:transparent;stroke:green;stroke-width: 5px;stroke-linecap: round;filter:url(#shadow);" cx="48" cy="50" r="45"/>
+</svg>
+</div>
+</html>

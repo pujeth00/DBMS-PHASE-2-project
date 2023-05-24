@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='mainicon.jpg') }}">
+    <script src="https://kit.fontawesome.com/0cfdb2b343.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css”/>
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css” />
+    <title>Akshaya/join with us</title>
+    <style>
+        body
+        {margin:0;
+            font-family: 'Poppins', sans-serif;}
+header{
+  position: fixed;
+  top:0;
+  height: 145px;
+  width: 100%;
+  background: white;
+  font-family: 'Poppins', sans-serif;
+  border-top:30px solid green;
+  padding: 10px 10%;
+  box-sizing: border-box;
+}
+header a
+{
+float: right;
+color: black;
+text-align: center;
+ padding: 14px 16px;
+margin:10px;
+font-size:1.3rem;
+text-align:center;
+}
+header a:hover {
+background-color: #121111;
+color: rgb(252, 249, 249);
+border-radius: 10px;
+}
+header a.do
+{
+color:aliceblue;
+background-color: green;
+border-radius: 11px;
+}
+
+header a.do:hover
+{
+color:rgb(8, 8, 8);
+background-color: rgb(0, 255, 0);
+}
+@supports (height: 97vh) { 
+  body{ 
+    background: linear-gradient(to right top, green 50%, #DDD 50%);
+    background-size: 100% calc(100% - 97vh + 129px);
+    background-repeat: no-repeat;
+  }
+
+  body:before{
+    content:'';
+    position: fixed;
+    top: 148px;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    background: white;
+
+  }
+}
+.a1
+{
+    float: right;
+   color: black;
+   padding: 14px 16px;
+   margin:10px;
+   font-size:2.4rem;
+   position: relative;
+   top:20%;
+   right:40%;
+   z-index:-1;
+}
+.d1
+{
+    color:white;
+    background-color: green;
+    padding:8px;
+    border:2px solid green;
+    border-radius:11px;
+}
+
+.a2
+{
+    text-align: center;
+    margin-left:20%;
+    margin-right:20%;
+}
+.r5
+{
+text-align: center;
+font-size: 1.5rem;
+border-style:outset;
+margin-top:30px;
+margin-left:10%;
+margin-right:10%;
+padding:20px;
+background: url(/static/img10.jpg) no-repeat center; 
+background-size: cover;
+z-index:-1;
+}
+.form-control
+{
+    height:40px;
+    width:300px;
+    background-color:azure;
+    color:#121111;
+    border:3px solid black;
+    border-radius:10px;
+    font-size: 1.0rem;
+}
+.btn-primary
+{
+    height:40px;
+    width:150px;
+    background-color:green;
+    color:white;
+    border:3px solid black;
+    border-radius:10px;
+    font-size: 1.25rem;
+    font-family:'Poppins', sans-serif; 
+}
+.btn-primary:hover
+{
+    background-color: rgb(15, 247, 15);
+    color:black;
+    border:3px solid black;
+}
+#fn1
+{
+    background-color: white;
+    color:black;
+    padding-right:7px;
+    z-index:-1;
+}
+.r7
+{
+    background-color: green;
+    color:aliceblue;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    align-items:center;
+    font-size:2rem;
+    text-align: center;
+}
+#e2
+{
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom:20px;
+}
+.r71
+{
+    float:right;
+}
+.r72
+{
+    background-color:white;
+    color:black;
+    border:3px solid black;
+    padding:5px;
+    font-family:'Poppins', sans-serif; 
+    border-radius:5px;
+    width:80px;
+    font-size:1rem;
+
+}
+
+.r72:hover
+{
+    background-color:rgb(8, 250, 8);
+    color:black;
+}
+
+.r73
+{
+    font-family:'Poppins', sans-serif; 
+    border:3px solid black;
+    border-radius:10px;
+
+}
+#container {
+  width: 150px;
+  height: 150px;
+  background: url(/static/mainload.png) no-repeat center; 
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #DDD;
+}
+
+@keyframes animation {
+  0% {
+    stroke-dasharray: 1 98;
+    stroke-dashoffset: -105;
+  }
+  50% {
+    stroke-dasharray: 80 10;
+    stroke-dashoffset: -160;
+  }
+  100% {
+    stroke-dasharray: 1 98;
+    stroke-dashoffset: -300;
+  }
+}
+
+#spinner {
+  transform-origin: center;
+  animation-name: animation;
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier;
+  animation-iteration-count: infinite;
+  
+}
+.white
+{
+  background: white;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='mainicon.jpg') }}" height="100px">
+        <a href="/donate" class="do"><b>Donate Now</b></a>
+        <a href="/joinwithus"><b>Join us</b></a>
+        <a href="/contact"><b>Contact</b></a>
+        <a href="/about"><b>About</b></a>
+        <a href="/"><b>Home</b></a>
+      </header>
+      <br><br>
+      <br><br>
+      <br><br>
+      <div class="a1">
+        <a><b>Join With</b></a>
+        <a class="d1"><b>us</b></a>
+    </div>
+    <br><br>
+    <br><br>
+    <div class="a2">
+        <h2><b>One of the greatest gifts you can give is your time</b></h2>
+        <h4><b>Join our team and visit hunger spots and distribute the food in your city. we need more active volunteers to spread love and fight against hunger .no age restrictions everyone who is willing to volunteer can join with us. Just fill the form or join your WhatsApp group we will get our daily activities and updates of your work in your city. Support us.</b></h4>
+        <h2><b>So far {{number}} members joined , join our cause and make a change</b></h2>
+    </div>
+    <br>
+    <div class="c6">
+
+    </div>
+    <div class="r5" id="join">
+        <form autocomplete="on" onsubmit="required()" name="form1" action="/submit" method="post">
+            <h2><b>Enter your details</b></h2>
+            <br>
+            <div class="form-row">
+              <div class="col">
+                <label for="name" id="fn1"><b id="fn2">First Name</b></label>
+                <input type="text" class="form-control" name="fn" id="fn">
+                <label for="name" id="fn1"><b id="ln2"> Last Name </b></label>
+                <input type="text" class="form-control" name="ln" id="ln">
+              </div>
+              <br>
+            </div>
+          <div class="form-group">
+            <label for="Phone" id="fn1"><b id="pn2">Phone Number*</b></label>
+            <input type="number" class="form-control"  aria-describedby="emailHelp" name="pn" id="pn">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="exampleInputEmail1" id="fn1"><b id="em2">Email*</b></label>
+            <input type="email" class="form-control" aria-describedby="emailHelp" name="em" id="em">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="inputState" id="fn1"><b id="st">State</b></label>
+            <select id="inputState" class="form-control" name="st" id="st">
+              <option selected>Choose..</option>
+              <option>Telengana</option>
+              <option>Andra Pradesh</option>
+              <option>Tamil Nadu</option>
+              <option>Kerala</option>
+              <option>Karnataka</option>
+            </select>
+          </div>
+          <br>
+          <button type="submit" class="btn-primary"><b>Submit</b></button>
+          <br>
+          <br>
+        </form>
+       
+      </div>
+      <br><br>
+      <br><br>
+      <div class="r7">
+        <br>
+        <br>
+        <div class="r71">
+          <form action="mailto:cs21b2032@iiitdm.ac.in">
+            <textarea name="myTextBox" cols="50" rows="5" class="r73" placeholder="enter here">
+              Suggestions...
+            </textarea>
+            <br />
+            <input type="submit" class="r72">
+            </form>
+            
+        </div>
+        <div>
+          <img src="{{ url_for('static', filename='mainicon.jpg') }}" height="100px" >
+          <h6><big>Akshaya</big> is a Not-For-Profit surplus food management organisation connecting untouched edible surplus food with needy people for making the World Hunger Free and Zero Food Waste.</h6>
+        </div>
+        <div>
+          <a><i class="bi-instagram" id="e2"></i></a>
+          <a><i class="bi-twitter" id="e2"></i></a>
+          <a><i class="bi-facebook" id="e2"></i></a>
+          <a><i class="bi-envelope"id="e2"></i></a>
+          <a><i class="bi-whatsapp"id="e2"></i></a>
+          <a><i class="bi-linkedin"id="e2"></i></a>
+          <br>
+          <br>
+        </div>
+      </div>
+<script>
+    function required()
+{
+  const ty=["ln","fn","pn","em","st"]
+  var x1=document.forms["form1"]["fn"].value;
+  var x2=document.forms["form1"]["ln"].value;
+  var x3=document.forms["form1"]["pn"].value;
+  var x4=document.forms["form1"]["em"].value;
+  var x5=document.forms["form1"]["st"].value;
+  if(x1=='')
+    {
+    document.getElementById("fn").style.border = " 3px solid red";
+    alert("Please enter the first name");
+    return false; 
+    }
+    if(x2=='')
+    {
+    document.getElementById("ln").style.border = "3px solid red";
+    alert("Please enter the last name");
+    return false; 
+    }
+    if(x3=='')
+    {
+    document.getElementById("pn").style.border = "3px solid red";
+    alert("Please enter the phone number");
+    return false; 
+    }
+    if(x4=='')
+    {
+    document.getElementById("em").style.border= "3px solid red";
+    alert("Please enter the email");
+    return false; 
+    }
+    if(x5=='')
+    {
+    document.getElementById("st").style.border= "3px solid red";
+    alert("Please choose the state");
+    return false; 
+    }
+   else
+   {
+    return true;
+   }
+}
+document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+              document.querySelector(
+                "body").style.visibility = "hidden";
+                document.querySelector(
+                "body").classList.add("white");
+                document.querySelector(
+                "#container").style.visibility = "visible";
+            } else {
+              document.querySelector("body").classList.remove("white");
+                document.querySelector(
+                "#container").style.display = "none";
+                document.querySelector(
+                "body").style.visibility = "visible";
+            }
+        };
+</script>
+</body>
+<div id="container">
+  <svg viewBox="0 0 100 100">
+    <defs>
+      <filter id="shadow">
+        <feDropShadow dx="0" dy="0" stdDeviation="1.5" 
+          flood-color="green"/>
+      </filter>
+    </defs>
+    <circle id="spinner" style="fill:transparent;stroke:green;stroke-width: 5px;stroke-linecap: round;filter:url(#shadow);" cx="48" cy="50" r="45"/>
+</svg>
+</div>
+</html>

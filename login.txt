@@ -1,0 +1,15 @@
+HOST=aws.connect.psdb.cloud
+USERNAME=y8y6kea6vzlxxebwqe3d
+PASSWORD=pscale_pw_5TH4OmawQQ5fxL9xSGEU5nPYjY95ihAUlYStCQ1EwP0
+DATABASE=akshaya
+
+create table form(
+ id int  not null auto_increment,
+ first_name varchar(30) not null ,
+ last_name varchar(30)  not null,
+ phone_number int(20) not null, 
+ email varchar(50) not null,
+ state varchar(50) not null,
+ primary key(id) );
+
+ (first_name,last_name, phone_number, email, state)
